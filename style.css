@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+#titulo {
+  font-size: 2.5rem;
+  height: 70%;
+  margin-bottom: 0.5rem;
+}
+#section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: #000814;
+  padding: 0 100px;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#conteiner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.406rem;
+  border-radius: 10px;
+  background: #7990ee;
+}
+#buttonConteiner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.iconPdfImg {
+  width: 1.563rem;
+  opacity: 50%;
+}
+.inputs {
+  height: 3rem;
+  width: 18.046rem;
+  font-size: 1rem;
+  border-radius: 0.625rem;
+  padding: 0 0 0 1.25rem;
+  background-color: #b5c6f2;
+  color: #2a2722;
+  outline: none;
+}
+.inputs:hover {
+  transition: 0.3s;
+  background-color: #d0d3ff;
+  transform: scale(1.01);
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  width: 6.521rem;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  background-color: #b5c6f2;
+  color: #807a6f;
+  font-size: 1rem;
+  gap: 10px;
+  cursor: pointer;
+}
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  color: #807a6f;
+}
+.links {
+  color: #cfcac0;
+  text-decoration: none;
+}
+.links:hover {
+  color: #2a2722;
+  transition: 0.5s;
+}
+.buttons:hover {
+  transition: 0.5s;
+  background-color: #d0d3ff;
+  transform: scale(1.05);
+}
+.imageside {
+  width: 40rem;
+  height: 30rem;
+  animation-delay: 1.5s;
+  overflow: visible;
+  animation: float 3s ease-in-out infinite;
+  background-image: url("./imgs/Group5.svg");
+  background-repeat: no-repeat;
+  background-size: 25rem;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  #section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: 120rem;
+  }
+  .imageside {
+    position: absolute;
+    width: 7rem;
+    height: 9.5rem;
+    background-repeat: no-repeat;
+    background-size: 5rem;
+    margin-top: -550px;
+    margin-right: -300px;
+    animation: none;
+  }
+}
