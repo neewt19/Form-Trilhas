@@ -14,7 +14,6 @@ input[type="number"]::-webkit-outer-spin-button {
 #titulo {
   font-size: 2.5rem;
   height: 70%;
-  margin-bottom: 0.5rem;
 }
 #section {
   display: flex;
@@ -183,7 +182,6 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-size: 120rem;
   }
   .imageside {
     position: absolute;
@@ -191,7 +189,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 9.5rem;
     background-repeat: no-repeat;
     background-size: 5rem;
-    margin-top: -550px;
+    margin-top: -700px;
     margin-right: -300px;
     animation: none;
   }

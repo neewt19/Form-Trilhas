@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var senhaInput = document.getElementById("senha");
+  var senhaInput = document.getElementById("loginSenha");
   var olho = document.getElementById("olho");
   olho.addEventListener("click", function () {
     if (senhaInput.type === "password") {
@@ -14,21 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("loginForm")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-
+      var nome = document.getElementById("loginNome").value;
       var email = document.getElementById("loginEmail").value;
       var senha = document.getElementById("loginSenha").value;
 
       var usuariosSalvos = JSON.parse(localStorage.getItem("usuarios"));
 
       var usuarioEncontrado = usuariosSalvos.find(function (usuario) {
-        return usuario.email === email && usuario.senha === senha;
+        return (
+          usuario.email === email &&
+          usuario.senha === senha &&
+          usuario.nome === nome
+        );
       });
 
       if (usuarioEncontrado) {
         alert("Login bem-sucedido!");
         window.location.href = "./telaInicial/homeScreen.html";
       } else {
-        alert("Email ou senha incorretos. Por favor, tente novamente.");
+        alert("Nome, email ou senha incorretos. Por favor, tente novamente.");
       }
     });
 });
