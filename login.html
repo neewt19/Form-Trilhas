@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <title>loguin</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+    />
+    <script src="./script.js"></script>
   </head>
   <body>
     <section id="section">
         <div class="imageside"></div>
         <div class="">
-          <form action="" id="form">
+          <form action="" id="loginForm">
             <h1 id="titulo">login</h1>
             <fieldset id="conteiner">
-              <input type="text" class="inputs" placeholder="NOME COMPLETO" />
-              <input type="email" class="inputs" placeholder="EMAIL" />
-              <input type="password" class="inputs" placeholder="SENHA" />
+              <input type="text" id="loginNome" class="inputs" placeholder="NOME COMPLETO" required/>
+              <input type="email" id="loginEmail" class="inputs" placeholder="EMAIL" required/>
+              <label for="loginSenha" class="senhaInput">
+                <input type="password" id="loginSenha" placeholder="SENHA" required/><img src="../imgs/ph_eye-bold.svg" id="olho">
+              </label>
               <div id="buttonConteiner">
                   <div id="links">
                       <a class="links" href="./cadastro/formulário.html">não foi cadastrado?</a>
                       <a class="links" href="./recuperacaoSenha/erro.html">esqueceu a senha?</a>
                   </div>
-                  <button class="buttons" href="./cadastro/formulário.html">ENTRAR</button>
+                  <button class="buttons" type="submit" href="./telaInicial/homeScreen.html">ENTRAR</button>
                 </div>
             </fieldset>
         </div>

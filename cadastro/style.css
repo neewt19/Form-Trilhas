@@ -22,7 +22,7 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   height: 100vh;
   background: #000814;
-  padding: 0 100px;
+  padding: 0 10rem;
 }
 #form {
   display: flex;
@@ -44,10 +44,7 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: space-between;
   gap: 20px;
 }
-#link {
-  text-decoration: none;
-  color: #807a6f;
-}
+
 .iconPdfImg {
   width: 1.563rem;
   opacity: 50%;
@@ -85,34 +82,87 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: scale(1.05);
 }
 .inputbutton {
+  display: flex;
   color: #2a2722;
   opacity: 50%;
+  overflow: hidden;
 }
 .imageside {
-  width: 15rem;
-  height: 20rem;
+  width: 25rem;
+  height: 26rem;
   animation-delay: 1.5s;
   overflow: visible;
   animation: float 3s ease-in-out infinite;
-  background-image: url("../imgs/Group3.svg");
+  background-image: url("../imgs/Group5.svg");
   background-repeat: no-repeat;
-  background-size: 15rem;
+  background-size: 25rem;
   cursor: pointer;
 }
 .inputFile {
   display: none;
 }
-
-.submitButton {
-  margin-top: 1rem;
+.senhaInput {
+  display: flex;
   height: 2.5rem;
-  width: 10.046rem;
+  width: 18.046rem;
   font-size: 0.9rem;
   border-radius: 0.625rem;
   padding: 0 0 0 1rem;
   background-color: #b5c6f2;
-  color: #2a2722;
   outline: none;
+}
+.senhaInput:hover {
+  transition: 0.3s;
+  background-color: #d0d3ff;
+  transform: scale(1.01);
+}
+#senha {
+  width: 85%;
+  height: 100%;
+  font-size: 0.9rem;
+  background: transparent;
+  outline: none;
+  color: #2a2722;
+}
+.submitButton {
+  height: 2.5rem;
+  width: 45%;
+  font-size: 0.9rem;
+  border-radius: 0.625rem;
+  outline: none;
+  background-color: #566dcd;
+}
+.submitButton:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+#olho {
+  cursor: pointer;
+  width: 1.7rem;
+}
+#link {
+  text-decoration: none;
+  color: #666666;
+}
+
+#buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#cancelButton {
+  height: 2.5rem;
+  border-radius: 10px;
+}
+#cancelButton:hover {
+  background-color: #a12525;
+}
+#cancel {
+  color: white;
+  text-decoration: none;
 }
 
 @keyframes float {

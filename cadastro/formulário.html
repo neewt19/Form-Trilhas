@@ -4,46 +4,110 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
     />
     <script src="./script.js"></script>
   </head>
   <body>
     <section id="section">
-      <div class="">
-        <form action="" id="form">
-          <h1 id="titulo">inscreva-se</h1>
-          <fieldset id="conteiner">
-            <input type="text" class="inputs" placeholder="NOME COMPLETO" />
-            <input type="email" class="inputs" placeholder="EMAIL" />
-            <input type="text" class="inputs" placeholder="CPF" />
-            <input type="password" class="inputs" placeholder="SENHA" />
-            <input type="number" class="inputs" placeholder="NUMERO" />
-            <input type="text" class="inputs" placeholder="ENDEREÇO" />
-            <input type="text" class="inputs" placeholder="CIDADE" />
-            <div id="FileInputsConteiner">
-              <label for="identidade" class="fileInputs">
-                <input type="file" id="identidade" class="inputFile" onchange="updateFileName(this)">
-                <img src="../imgs/Vector.svg" class="iconPdfImg" />
-                <p class="inputbutton">DOCUMENTO DE IDENTIDADE</p>
-              </label>
-              <label for="declaração" class="fileInputs">
-                <input type="file" id="declaração" class="inputFile" onchange="updateFileName(this)">
-                <img src="../imgs/Vector.svg" class="iconPdfImg" />
-                <p class="inputbutton">DECLARAÇÃO DE RESIDENCIA</p>
-              </label>
-            </div>
-          </fieldset>
-          <button class="submitButton"><a id="link" href="../login.html">ENVIAR</a></button>
-      </div>
+      <form id="form">
+        <h1 id="titulo">inscreva-se</h1>
+        <fieldset id="conteiner">
+          <input
+            type="text"
+            class="inputs"
+            id="nome"
+            placeholder="NOME COMPLETO"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            class="inputs"
+            placeholder="EMAIL"
+            required
+          />
+          <input
+            type="text"
+            class="inputs"
+            id="cpf"
+            placeholder="CPF"
+            required
+          />
+          <label for="senha" class="senhaInput">
+            <input
+              type="password"
+              id="senha"
+              placeholder="SENHA"
+              required
+            /><img src="../imgs/ph_eye-bold.svg" id="olho" />
+          </label>
+          <input
+            type="text"
+            class="inputs"
+            id="numero"
+            placeholder="NUMERO"
+            required
+          />
+          <input
+            type="text"
+            class="inputs"
+            id="endereco"
+            placeholder="ENDEREÇO"
+            required
+          />
+          <input
+            type="text"
+            class="inputs"
+            id="cidade"
+            placeholder="CIDADE"
+            required
+          />
+
+          <div id="FileInputsConteiner">
+            <label for="identidade" class="fileInputs">
+              <input
+                type="file"
+                id="identidade"
+                class="inputFile"
+                onchange="updateFileName(this)"
+                accept="application/pdf"
+                required
+              />
+              <img src="../imgs/Vector.svg" class="iconPdfImg" />
+              <p class="inputbutton">DOCUMENTO DE IDENTIDADE</p>
+            </label>
+
+            <label for="declaracao" class="fileInputs">
+              <input
+                type="file"
+                id="declaracao"
+                class="inputFile"
+                onchange="updateFileName(this)"
+                accept="application/pdf"
+                required
+              />
+              <img src="../imgs/Vector.svg" class="iconPdfImg" />
+              <p class="inputbutton">DECLARAÇÃO DE RESIDENCIA</p>
+            </label>
+          </div>
+
+          <div id="buttonContainer">
+            <button class="submitButton" id="cancelButton">
+              <a href="../login.html" id="cancel">VOLTAR</a>
+            </button>
+            <button type="submit" class="submitButton" id="submitButton">
+              ENVIAR
+            </button>
+          </div>
+        </fieldset>
       </form>
-      <div class="imageside">
-      </div>
-    </section>  
+      <div class="imageside"></div>
+    </section>
   </body>
 </html>

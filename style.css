@@ -20,7 +20,7 @@
   background: #000814;
   padding: 0 100px;
 }
-#form {
+#loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,6 +70,28 @@
   font-size: 1rem;
   gap: 10px;
   cursor: pointer;
+}
+.senhaInput {
+  display: flex;
+  height: 3rem;
+  width: 18.046rem;
+  font-size: 0.9rem;
+  border-radius: 0.625rem;
+  padding: 0 0 0 1rem;
+  background-color: #b5c6f2;
+  outline: none;
+}
+#loginSenha {
+  width: 85%;
+  height: 100%;
+  font-size: 0.9rem;
+  background: transparent;
+  outline: none;
+  color: #2a2722;
+}
+#olho {
+  cursor: pointer;
+  width: 2rem;
 }
 #links {
   display: flex;
